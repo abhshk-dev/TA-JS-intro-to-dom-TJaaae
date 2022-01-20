@@ -60,14 +60,17 @@ body{
 }
 .container{
     max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
 }
 .flex{
-    display: flexbox;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
 }
 .flex-22{
-    flex: 0 1 22%;
+    flex: 0 1 30%;
 }
 .header{
     padding: 1rem 2rem;
@@ -83,10 +86,24 @@ body{
 
 li{
     background-color: #fff;
+    box-sizing: border-box;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
     
+}
+img{
+    width: 100%;
+}
+h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.7rem 0;
 }
 .btn{
     color: #fff;
     background-color:rgb(55,126,128);
     border-radius: 0.4rem;
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
 }
