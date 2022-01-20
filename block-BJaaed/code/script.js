@@ -114,21 +114,30 @@ let bookList={
           "A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM and browser patterns",
         website: "https://shichuan.github.io/javascript-patterns/",
       },
-    ],
+    ]
   };
-  let ul=document.querySelector('ul');
-  let acc=bookList.books;
-  acc.forEach((book) => {
+
+  let ul=document.querySelector("ul");
+
+    bookList.books.forEach((book) => {
     let li=document.createElement('li');
     let img=document.createElement('img');
     img.src=book.image;
+    img.alt=book.title;
     let h2=document.createElement('h2');
     h2.innerText=book.title;
+    let p=document.createElement('p');
+    p.innerText='Author:'; 
     let span=document.createElement('span');
-    span.innerText=book.author;
-
-    li.append(img,h2,span);
+    let authorName=document.createTextNode(book.author);
+    span.append(authorName);
+    p.append(span);
+    let button=document.createElement('button');
+    button.innerText='BuyNow';
+    button.classList.add('btn')
+    li.classList.add('flex-22');
+    li.append(img,h2,p,span,button);
     
+  
     ul.append(li);
-    
-  })
+  });
