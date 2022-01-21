@@ -90,10 +90,17 @@ h1{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  flex: 0 1 28%;
+  flex: 0 1 30%;
+}
+.flex-30{
+  flex: 0 1 30%;
 }
 .center{
+  display: flex;
   align-items: center;
+}
+.text-center{
+  text-align: center;
 }
 /* cards */
 
@@ -113,7 +120,21 @@ img{
 
 /* button*/
 
-.btn{
-  background-color: rgb(231,237,253);
-  color: #307667;
+.card p{
+  text-align: center;
+  padding: 0.9rem 0;
+}
+
+.card h2{
+  padding-left: 2rem;
+  font-size: 1.33rem;
+}
+
+.card a{
+  text-decoration: none;
+  display: inline-block;
+  background-color: #E7EDFD;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 0.4rem;
 }
